@@ -1,0 +1,13 @@
+{% extends 'revista/base.html' %}
+{% block content %}
+<h2>Lista de Artículos</h2>
+<ul class="list-group">
+  {% for articulo in articulos %}
+    <li class="list-group-item">
+      <strong>{{ articulo.titulo }}</strong> - {{ articulo.autor }}
+    </li>
+  {% empty %}
+    <li class="list-group-item">No hay artículos aún.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
